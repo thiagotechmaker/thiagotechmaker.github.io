@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+<a class="pular" href="#conteudo"><span lang="pt">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
 
 <header class="topo">
   <a class="marca" href="#inicio"><img src="img/logo.png" alt="ScrapCade OS"></a>
@@ -23,33 +24,34 @@
     <a href="#ichroma">iChroma</a>
     <a href="https://github.com/thiagotechmaker/scrapcade.os">GitHub</a>
   </nav>
-  <button class="idioma" type="button" aria-label="Mudar o idioma / Change language"><span lang="pt">EN</span><span lang="en">PT</span></button>
+  <button class="idioma" type="button"><span lang="pt"><span class="so-leitor">Ver em inglês: </span>EN</span><span lang="en"><span class="so-leitor">Ver em português: </span>PT</span></button>
 </header>
 
-<main>
+<main id="conteudo">
 <section class="abertura" id="inicio">
   <div class="abertura-texto">
     <h1><span lang="pt">Computador velho vira videogame.</span><span lang="en">Old computers become game consoles.</span></h1>
     <p class="sub">
-      <span lang="pt">O ScrapCade OS liga direto num menu de jogos. Grave num pen drive, ligue o PC e jogue: NES ao PlayStation, Nintendo 64, PSP e fliperama.</span>
-      <span lang="en">ScrapCade OS boots straight into a game menu. Write it to a USB stick, start the PC and play: NES to PlayStation, Nintendo 64, PSP and arcade.</span>
+      <span lang="pt">O ScrapCade OS liga direto num menu de jogos. Grave num pen drive, ligue o PC e jogue do NES ao Nintendo 64, PSP e fliperama.</span>
+      <span lang="en">ScrapCade OS boots straight into a game menu. Write it to a USB stick, start the PC and play anything from NES to Nintendo 64, PSP and arcade.</span>
     </p>
     <div class="acoes">
       <a class="botao" data-iso="64" href="https://github.com/thiagotechmaker/scrapcade.os/releases/latest">
         <span lang="pt">Baixar para PC de 64 bits</span><span lang="en">Download for 64-bit PCs</span>
+        <span class="tamanho" data-tam="64"></span>
       </a>
       <a class="link-claro" data-iso="32" href="https://github.com/thiagotechmaker/scrapcade.os/releases/latest">
-        <span lang="pt">PC antigo de 32 bits</span><span lang="en">Old 32-bit PC</span>
+        <span lang="pt">Baixar para PC de 32 bits</span><span lang="en">Download for 32-bit PCs</span>
       </a>
       <a class="link-claro" href="https://github.com/thiagotechmaker/scrapcade.os/releases">
         <span lang="pt">Todas as versões</span><span lang="en">All releases</span>
       </a>
     </div>
-    <p class="versao"><span lang="pt">Versão</span><span lang="en">Version</span> <b data-versao>v0.20.0-beta</b>. <span lang="pt">Livre e de código aberto (GPLv3).</span><span lang="en">Free and open source (GPLv3).</span></p>
+    <p class="versao"><span lang="pt">Versão atual:</span><span lang="en">Current version:</span> <b data-versao>v0.20.0-beta</b>. <span lang="pt">Livre e de código aberto (GPLv3).</span><span lang="en">Free and open source (GPLv3).</span></p>
   </div>
 
   <figure class="vitrine">
-    <div class="tela"><img src="img/carrossel.png" width="1280" height="800"
+    <div class="tela"><img src="img/carrossel.jpg" width="1280" height="800"
       alt="Menu do ScrapCade com o carrossel de capas" data-alt-en="ScrapCade menu with the cover carousel"></div>
     <div class="etiqueta" aria-hidden="true">
       <span class="furo"></span>
@@ -65,7 +67,7 @@
   <ol class="passos">
     <li>
       <h3><span lang="pt">Baixe o .iso</span><span lang="en">Download the .iso</span></h3>
-      <p><span lang="pt">Um arquivo só, para BIOS antigo e UEFI. Escolha 64 ou 32 bits.</span><span lang="en">One file for legacy BIOS and UEFI. Pick 64 or 32 bits.</span></p>
+      <p><span lang="pt">Um arquivo só, para BIOS antigo e UEFI: <a data-iso="64" href="https://github.com/thiagotechmaker/scrapcade.os/releases/latest">64 bits</a> ou <a data-iso="32" href="https://github.com/thiagotechmaker/scrapcade.os/releases/latest">32 bits</a>.</span><span lang="en">One file for legacy BIOS and UEFI: <a data-iso="64" href="https://github.com/thiagotechmaker/scrapcade.os/releases/latest">64-bit</a> or <a data-iso="32" href="https://github.com/thiagotechmaker/scrapcade.os/releases/latest">32-bit</a>.</span></p>
     </li>
     <li>
       <h3><span lang="pt">Grave num pen drive</span><span lang="en">Write it to a USB stick</span></h3>
@@ -80,7 +82,7 @@
 </section>
 
 <section class="secao novidades" id="novidades">
-  <h2><span lang="pt">Novidades da v0.20</span><span lang="en">New in v0.20</span></h2>
+  <h2><span lang="pt">Chegando na v0.20</span><span lang="en">Coming in v0.20</span></h2>
   <ul>
     <li><span lang="pt">Versão para PCs antigos de 32 bits: Pentium 4, Pentium M e Atom.</span><span lang="en">A version for old 32-bit PCs: Pentium 4, Pentium M and Atom.</span></li>
     <li><span lang="pt">Boot animado e tela de carregamento: nada de texto de terminal na tela.</span><span lang="en">Animated boot and loading screen: no terminal text on screen.</span></li>
@@ -100,17 +102,17 @@
       <th><span lang="pt">PC para rodar bem</span><span lang="en">PC to run it well</span></th><th>32 bits</th>
     </tr></thead>
     <tbody>
-      <tr><td>NES, Master System, Game Gear, Game Boy</td><td>Mesen, Genesis Plus GX, Gambatte</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim">✓</td></tr>
-      <tr><td>Super Nintendo, Mega Drive, Game Boy Advance</td><td>Snes9x, Genesis Plus GX, mGBA</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim">✓</td></tr>
-      <tr><td><span lang="pt">Fliperama, Neo Geo</span><span lang="en">Arcade, Neo Geo</span></td><td>FBNeo</td><td>Pentium 4, Atom</td><td class="sim">✓</td></tr>
-      <tr><td>PC (DOS), Doom</td><td>DOSBox Pure, PrBoom</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim">✓</td></tr>
-      <tr><td>PlayStation</td><td>PCSX ReARMed</td><td>Pentium 4, Atom</td><td class="sim">✓</td></tr>
-      <tr><td>Nintendo 64</td><td>Mupen64Plus-Next</td><td><span lang="pt">Core 2 Duo e vídeo com OpenGL 3.3 (sem ele, mais lento)</span><span lang="en">Core 2 Duo and OpenGL 3.3 graphics (slower without it)</span></td><td class="sim">✓</td></tr>
-      <tr><td>Nintendo DS</td><td>melonDS</td><td>Core 2 Duo</td><td class="nao">–</td></tr>
-      <tr><td>PSP, Dreamcast</td><td>PPSSPP, Flycast</td><td><span lang="pt">Core i3 e vídeo com OpenGL 3.3</span><span lang="en">Core i3 and OpenGL 3.3 graphics</span></td><td class="nao">–</td></tr>
-      <tr><td>Sega Saturn</td><td>Beetle Saturn</td><td><span lang="pt">Core i5 de 4 núcleos</span><span lang="en">Quad-core Core i5</span></td><td class="nao">–</td></tr>
-      <tr><td>Half-Life</td><td>Xash3D</td><td><span lang="pt">Core 2 Duo (com a sua cópia da Steam)</span><span lang="en">Core 2 Duo (with your own Steam copy)</span></td><td class="sim">✓</td></tr>
-      <tr class="em-breve"><td>PS2, GameCube, Wii, 3DS</td><td>PCSX2, Dolphin, Azahar</td><td><span lang="pt">Na v0.22, para PCs mais novos</span><span lang="en">Coming in v0.22, for newer PCs</span></td><td class="nao">–</td></tr>
+      <tr><td>NES, Master System, Game Gear, Game Boy</td><td>Mesen, Genesis Plus GX, Gambatte</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim"><span aria-hidden="true">✓</span><span class="so-leitor"><span lang="pt">sim</span><span lang="en">yes</span></span></td></tr>
+      <tr><td>Super Nintendo, Mega Drive, Game Boy Advance</td><td>Snes9x, Genesis Plus GX, mGBA</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim"><span aria-hidden="true">✓</span><span class="so-leitor"><span lang="pt">sim</span><span lang="en">yes</span></span></td></tr>
+      <tr><td><span lang="pt">Fliperama, Neo Geo</span><span lang="en">Arcade, Neo Geo</span></td><td>FBNeo</td><td>Pentium 4, Atom</td><td class="sim"><span aria-hidden="true">✓</span><span class="so-leitor"><span lang="pt">sim</span><span lang="en">yes</span></span></td></tr>
+      <tr><td>PC (DOS), Doom</td><td>DOSBox Pure, PrBoom</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim"><span aria-hidden="true">✓</span><span class="so-leitor"><span lang="pt">sim</span><span lang="en">yes</span></span></td></tr>
+      <tr><td>PlayStation</td><td>PCSX ReARMed</td><td>Pentium 4, Atom</td><td class="sim"><span aria-hidden="true">✓</span><span class="so-leitor"><span lang="pt">sim</span><span lang="en">yes</span></span></td></tr>
+      <tr><td>Nintendo 64</td><td>Mupen64Plus-Next</td><td><span lang="pt">Core 2 Duo e vídeo com OpenGL 3.3 (sem ele, mais lento)</span><span lang="en">Core 2 Duo and OpenGL 3.3 graphics (slower without it)</span></td><td class="sim"><span aria-hidden="true">✓</span><span class="so-leitor"><span lang="pt">sim</span><span lang="en">yes</span></span></td></tr>
+      <tr><td>Nintendo DS</td><td>melonDS</td><td>Core 2 Duo</td><td class="nao"><span aria-hidden="true">–</span><span class="so-leitor"><span lang="pt">não</span><span lang="en">no</span></span></td></tr>
+      <tr><td>PSP, Dreamcast</td><td>PPSSPP, Flycast</td><td><span lang="pt">Core i3 e vídeo com OpenGL 3.3</span><span lang="en">Core i3 and OpenGL 3.3 graphics</span></td><td class="nao"><span aria-hidden="true">–</span><span class="so-leitor"><span lang="pt">não</span><span lang="en">no</span></span></td></tr>
+      <tr><td>Sega Saturn</td><td>Beetle Saturn</td><td><span lang="pt">Core i5 de 4 núcleos</span><span lang="en">Quad-core Core i5</span></td><td class="nao"><span aria-hidden="true">–</span><span class="so-leitor"><span lang="pt">não</span><span lang="en">no</span></span></td></tr>
+      <tr><td>Half-Life</td><td>Xash3D</td><td><span lang="pt">Core 2 Duo (com a sua cópia da Steam)</span><span lang="en">Core 2 Duo (with your own Steam copy)</span></td><td class="sim"><span aria-hidden="true">✓</span><span class="so-leitor"><span lang="pt">sim</span><span lang="en">yes</span></span></td></tr>
+      <tr class="em-breve"><td>PS2, GameCube, Wii, 3DS</td><td>PCSX2, Dolphin, Azahar</td><td><span lang="pt">Na v0.22, para PCs mais novos</span><span lang="en">Coming in v0.22, for newer PCs</span></td><td class="nao"><span aria-hidden="true">–</span><span class="so-leitor"><span lang="pt">não</span><span lang="en">no</span></span></td></tr>
     </tbody>
   </table>
   </div>
@@ -120,12 +122,12 @@
 <section class="secao escura" id="capturas">
   <h2><span lang="pt">Capturas</span><span lang="en">Screenshots</span></h2>
   <div class="galeria">
-    <figure class="grande"><img loading="lazy" src="img/carrossel.png" width="1280" height="800" alt="Carrossel de capas" data-alt-en="Cover carousel"><figcaption><span lang="pt">Carrossel com filtros por console, favoritos e "Continuar jogando".</span><span lang="en">Carousel with console filters, favorites and "Continue playing".</span></figcaption></figure>
-    <figure><img loading="lazy" src="img/painel.png" width="1280" height="800" alt="Painel Sistema" data-alt-en="System panel"><figcaption><span lang="pt">Painel Sistema, com a explicação de cada opção.</span><span lang="en">System panel, with each option explained.</span></figcaption></figure>
-    <figure><img loading="lazy" src="img/perfis.png" width="1280" height="800" alt="Perfis com avatar" data-alt-en="Profiles with avatars"><figcaption><span lang="pt">Perfis: cada um com seus saves e favoritos.</span><span lang="en">Profiles, each with its own saves and favorites.</span></figcaption></figure>
+    <figure class="grande"><img loading="lazy" src="img/carrossel.jpg" width="1280" height="800" alt="Carrossel de capas" data-alt-en="Cover carousel"><figcaption><span lang="pt">Carrossel com filtros por console, favoritos e "Continuar jogando".</span><span lang="en">Carousel with console filters, favorites and "Continue playing".</span></figcaption></figure>
+    <figure><img loading="lazy" src="img/painel.jpg" width="1280" height="800" alt="Painel Sistema" data-alt-en="System panel"><figcaption><span lang="pt">Painel Sistema, com a explicação de cada opção.</span><span lang="en">System panel, with each option explained.</span></figcaption></figure>
+    <figure><img loading="lazy" src="img/perfis.jpg" width="1280" height="800" alt="Perfis com avatar" data-alt-en="Profiles with avatars"><figcaption><span lang="pt">Perfis: cada um com seus saves e favoritos.</span><span lang="en">Profiles, each with its own saves and favorites.</span></figcaption></figure>
     <figure><img loading="lazy" src="img/carregando.png" width="1280" height="800" alt="Abrindo um jogo" data-alt-en="Opening a game"><figcaption><span lang="pt">Abrindo um jogo, com os atalhos na tela.</span><span lang="en">Opening a game, with the shortcuts on screen.</span></figcaption></figure>
     <figure><img loading="lazy" src="img/freedoom.png" width="1280" height="800" alt="Freedoom rodando" data-alt-en="Freedoom running"><figcaption><span lang="pt">Freedoom, um dos jogos livres que o sistema baixa.</span><span lang="en">Freedoom, one of the free games it downloads.</span></figcaption></figure>
-    <figure><img loading="lazy" src="img/energia.png" width="1280" height="800" alt="Menu do botão de energia" data-alt-en="Power button menu"><figcaption><span lang="pt">Botão de energia: suspender, reiniciar ou desligar.</span><span lang="en">Power button: sleep, restart or shut down.</span></figcaption></figure>
+    <figure><img loading="lazy" src="img/energia.jpg" width="1280" height="800" alt="Menu do botão de energia" data-alt-en="Power button menu"><figcaption><span lang="pt">Botão de energia: suspender, reiniciar ou desligar.</span><span lang="en">Power button: sleep, restart or shut down.</span></figcaption></figure>
   </div>
 </section>
 
@@ -143,7 +145,10 @@
 
 <section class="secao escura" id="ichroma">
   <div class="ichroma">
-    <img class="ichroma-gif" loading="lazy" src="img/boot.gif" width="400" height="240" alt="Animação de boot do fliperama" data-alt-en="Arcade boot animation">
+    <figure class="ichroma-anim">
+      <img class="ichroma-gif" loading="lazy" src="img/boot_parado.png" data-gif="img/boot.gif" width="400" height="240" alt="Animação de boot do fliperama" data-alt-en="Arcade boot animation">
+      <button class="ver-anim" type="button" aria-pressed="false"><span lang="pt">Ver a animação de boot</span><span lang="en">Play the boot animation</span></button>
+    </figure>
     <div>
       <h2><span lang="pt">Fliperama no iChroma</span><span lang="en">Arcade on the iChroma</span></h2>
       <p><span lang="pt">Android 2.3 com boot próprio e o menu ScrapCade em Java, pela GPU. Roda PlayStation, Super Nintendo, Neo Geo e Nintendo 64 num processador de 1 GHz.</span><span lang="en">Android 2.3 with its own boot and the ScrapCade menu in Java, on the GPU. Runs PlayStation, Super Nintendo, Neo Geo and Nintendo 64 on a 1 GHz processor.</span></p>
@@ -161,7 +166,7 @@
   <nav aria-label="Links">
     <a href="https://github.com/thiagotechmaker/scrapcade.os">ScrapCade OS</a>
     <a href="https://github.com/thiagotechmaker/scrapcade-fliperama"><span lang="pt">Fliperama do iChroma</span><span lang="en">iChroma arcade</span></a>
-    <a href="https://github.com/thiagotechmaker/scrapcade.os/discussions"><span lang="pt">Conversas</span><span lang="en">Discussions</span></a>
+    <a href="https://github.com/thiagotechmaker/scrapcade.os/discussions"><span lang="pt">Comunidade</span><span lang="en">Community</span></a>
     <a href="https://github.com/thiagotechmaker/scrapcade.os/issues/new/choose"><span lang="pt">Relatar um problema</span><span lang="en">Report a problem</span></a>
   </nav>
   <p><span lang="pt">Código livre (GPLv3). Logotipos de consoles são dos seus donos e aparecem só para identificação.</span><span lang="en">Free software (GPLv3). Console logos belong to their owners and appear only for identification.</span></p>

@@ -9,7 +9,7 @@
   --texto: #1d1b2b;
   --texto-suave: #4f5160;
   --menta: #32e6a8;
-  --menta-escura: #0f7c58;
+  --menta-escura: #0b6b4b;   /* 5,2:1 sobre o aco: passa no WCAG AA */
   --etiqueta: #f5c842;
   --branco: #fff;
   --largura: 72rem;
@@ -28,7 +28,15 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--menta-escura); text-underline-offset: 0.18em; }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--etiqueta); outline-offset: 3px; border-radius: 2px; }
+/* foco: indigo nas partes claras, amarelo nas escuras (sempre com contraste) */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; border-radius: 2px; }
+.topo :focus-visible, .abertura :focus-visible, .escura :focus-visible, .rodape :focus-visible, .pular:focus-visible { outline-color: var(--etiqueta); }
+
+/* texto so para leitor de tela */
+.so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+/* pular para o conteudo: aparece so com o teclado */
+.pular { position: absolute; left: 1rem; top: -4rem; z-index: 20; padding: 0.6rem 1rem; background: var(--tinta); color: var(--branco); border-radius: 3px; }
+.pular:focus { top: 0.75rem; }
 
 /* idioma: so a lingua escolhida aparece */
 html[data-lingua="pt"] [lang="en"], html[data-lingua="en"] [lang="pt"] { display: none !important; }
@@ -43,12 +51,12 @@ html[data-lingua="pt"] [lang="en"], html[data-lingua="en"] [lang="pt"] { display
 }
 .marca img { width: 148px; image-rendering: pixelated; }
 .topo nav { display: flex; gap: 1.25rem; margin-left: auto; flex-wrap: wrap; }
-.topo nav a { color: #d8dbf2; text-decoration: none; font-size: 0.95rem; }
+.topo nav a { color: #d8dbf2; text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; min-height: 44px; }   /* toque de 44 px */
 .topo nav a:hover { color: var(--branco); text-decoration: underline; }
 .idioma {
   font: inherit; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.02em;
   color: var(--tinta); background: var(--menta); border: 0; border-radius: 3px;
-  padding: 0.3rem 0.6rem; cursor: pointer;
+  padding: 0.3rem 0.6rem; cursor: pointer; min-width: 44px; min-height: 44px;
 }
 
 /* ---- abertura */
@@ -76,6 +84,7 @@ html[data-lingua="pt"] [lang="en"], html[data-lingua="en"] [lang="pt"] { display
 .link-claro { color: #d8dbf2; }
 .versao { margin: 1.75rem 0 0; font-size: 0.9rem; color: #9ea1c4; }
 .versao b { color: #e9eaf7; font-weight: 650; }
+.tamanho { font-weight: 500; font-variation-settings: "wdth" 90; opacity: 0.8; }
 
 /* a captura numa "tela" de gabinete, com a etiqueta de descarte amarrada */
 .vitrine { position: relative; margin: 0; }
@@ -158,7 +167,7 @@ section[id] { scroll-margin-top: 4.5rem; }   /* o topo fixo nao cobre o titulo a
 .inventario td:first-child { font-weight: 650; }
 .inventario td:last-child, .inventario th:last-child { text-align: center; width: 5.5rem; }
 .inventario .sim { color: var(--menta-escura); font-weight: 800; }
-.inventario .nao { color: var(--aco-escuro); }
+.inventario .nao { color: var(--texto-suave); }
 .inventario .em-breve td { color: var(--texto-suave); font-style: italic; }
 
 /* capturas */
@@ -176,7 +185,12 @@ section[id] { scroll-margin-top: 4.5rem; }   /* o topo fixo nao cobre o titulo a
 
 /* ichroma */
 .ichroma { display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; }
-.ichroma-gif { width: 400px; border-radius: 6px; border: 10px solid #2c2f3a; image-rendering: auto; }
+.ichroma-anim { margin: 0; display: grid; gap: 0.75rem; justify-items: start; }
+.ichroma-gif { width: 400px; border-radius: 6px; border: 10px solid #2c2f3a; }
+.ver-anim {
+  font: inherit; font-size: 0.92rem; color: var(--menta); background: none; cursor: pointer;
+  border: 2px solid var(--menta); border-radius: 4px; padding: 0.45rem 0.9rem; min-height: 44px;
+}
 .ichroma p { max-width: 36rem; color: #c9cbe3; }
 .ichroma .botao { color: var(--tinta); }
 
@@ -188,13 +202,17 @@ section[id] { scroll-margin-top: 4.5rem; }   /* o topo fixo nao cobre o titulo a
 }
 .rodape img { image-rendering: pixelated; opacity: 0.85; }
 .rodape nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
-.rodape a { color: #d8dbf2; }
+.rodape a { color: #d8dbf2; display: inline-flex; align-items: center; min-height: 44px; }
 .rodape p { margin: 0; max-width: 46rem; }
 
 /* ---- telas pequenas */
 @media (max-width: 860px) {
-  .topo nav { display: none; }
+  .topo { flex-wrap: wrap; row-gap: 0.4rem; }
   .idioma { margin-left: auto; }
+  /* no celular o menu vira uma faixa que rola para o lado */
+  .topo nav { order: 3; width: 100%; margin: 0; flex-wrap: nowrap; overflow-x: auto; gap: 1.1rem; padding-bottom: 0.2rem; }
+  .topo nav a { white-space: nowrap; padding: 0.35rem 0; }
+  section[id] { scroll-margin-top: 6.5rem; }
   .abertura { grid-template-columns: 1fr; padding-top: 3rem; padding-bottom: 5rem; gap: 2.5rem; }
   .etiqueta { left: auto; right: -0.25rem; bottom: -2.2rem; width: 12rem; }
   .passos { grid-template-columns: 1fr; }
