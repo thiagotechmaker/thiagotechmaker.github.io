@@ -110,6 +110,7 @@ html[data-lingua="pt"] [lang="en"], html[data-lingua="en"] [lang="pt"] { display
 }
 
 /* ---- secoes */
+section[id] { scroll-margin-top: 4.5rem; }   /* o topo fixo nao cobre o titulo ao clicar no menu */
 .secao { padding: 5rem max(1rem, calc((100% - var(--largura)) / 2)); }
 .secao h2 {
   margin: 0 0 1.75rem;
@@ -135,6 +136,16 @@ html[data-lingua="pt"] [lang="en"], html[data-lingua="en"] [lang="pt"] { display
   font-size: 2.2rem; line-height: 1; font-weight: 900; font-variation-settings: "wdth" 125; color: var(--menta-escura);
 }
 .passos p { margin: 0; color: var(--texto-suave); }
+
+/* novidades da versao: lista curta, com a marca menta de "recem-chegado" */
+.novidades { padding-top: 0; }
+.novidades ul { list-style: none; margin: 0 0 1.25rem; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem 2.5rem; max-width: 60rem; }
+.novidades li { position: relative; padding-left: 1.4rem; color: var(--texto-suave); }
+.novidades li::before {
+  content: ""; position: absolute; left: 0; top: 0.55em; width: 0.6rem; height: 0.6rem;
+  background: var(--menta-escura); border-radius: 1px;
+}
+@media (max-width: 860px) { .novidades ul { grid-template-columns: 1fr; } }
 
 /* consoles: folha de inventario */
 .tabela-rolagem { overflow-x: auto; background: var(--aco-claro); border: 1px solid var(--aco-escuro); border-radius: 4px; }
