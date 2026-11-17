@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR" data-lingua="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScrapCade OS</title>
+<meta name="description" content="Sistema que transforma computadores velhos em consoles de videogame. Grave num pen drive, ligue o PC e jogue.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="topo">
+  <a class="marca" href="#inicio"><img src="img/logo.png" alt="ScrapCade OS"></a>
+  <nav aria-label="Seções">
+    <a href="#instalar"><span lang="pt">Instalar</span><span lang="en">Install</span></a>
+    <a href="#consoles">Consoles</a>
+    <a href="#capturas"><span lang="pt">Capturas</span><span lang="en">Screenshots</span></a>
+    <a href="#historia"><span lang="pt">História</span><span lang="en">Story</span></a>
+    <a href="#ichroma">iChroma</a>
+    <a href="https://github.com/thiagotechmaker/scrapcade.os">GitHub</a>
+  </nav>
+  <button class="idioma" type="button" aria-label="Mudar o idioma / Change language"><span lang="pt">EN</span><span lang="en">PT</span></button>
+</header>
+
+<main>
+<section class="abertura" id="inicio">
+  <div class="abertura-texto">
+    <h1><span lang="pt">Computador velho vira videogame.</span><span lang="en">Old computers become game consoles.</span></h1>
+    <p class="sub">
+      <span lang="pt">O ScrapCade OS liga direto num menu de jogos. Grave num pen drive, ligue o PC e jogue: NES ao PlayStation, Nintendo 64, PSP e fliperama.</span>
+      <span lang="en">ScrapCade OS boots straight into a game menu. Write it to a USB stick, start the PC and play: NES to PlayStation, Nintendo 64, PSP and arcade.</span>
+    </p>
+    <div class="acoes">
+      <a class="botao" data-iso="64" href="https://github.com/thiagotechmaker/scrapcade.os/releases/latest">
+        <span lang="pt">Baixar para PC de 64 bits</span><span lang="en">Download for 64-bit PCs</span>
+      </a>
+      <a class="link-claro" data-iso="32" href="https://github.com/thiagotechmaker/scrapcade.os/releases/latest">
+        <span lang="pt">PC antigo de 32 bits</span><span lang="en">Old 32-bit PC</span>
+      </a>
+      <a class="link-claro" href="https://github.com/thiagotechmaker/scrapcade.os/releases">
+        <span lang="pt">Todas as versões</span><span lang="en">All releases</span>
+      </a>
+    </div>
+    <p class="versao"><span lang="pt">Versão</span><span lang="en">Version</span> <b data-versao>v0.20.0-beta</b>. <span lang="pt">Livre e de código aberto (GPLv3).</span><span lang="en">Free and open source (GPLv3).</span></p>
+  </div>
+
+  <figure class="vitrine">
+    <div class="tela"><img src="img/carrossel.png" width="1280" height="800"
+      alt="Menu do ScrapCade com o carrossel de capas" data-alt-en="ScrapCade menu with the cover carousel"></div>
+    <div class="etiqueta" aria-hidden="true">
+      <span class="furo"></span>
+      <span class="etq-titulo"><span lang="pt">Lixo eletrônico</span><span lang="en">E-waste</span></span>
+      <span class="etq-linha"><span lang="pt">Destino:</span><span lang="en">Destination:</span> <s><span lang="pt">reciclagem</span><span lang="en">recycling</span></s></span>
+      <span class="carimbo"><span lang="pt">jogar</span><span lang="en">play</span></span>
+    </div>
+  </figure>
+</section>
+
+<section class="secao" id="instalar">
+  <h2><span lang="pt">Instalar em 3 passos</span><span lang="en">Install in 3 steps</span></h2>
+  <ol class="passos">
+    <li>
+      <h3><span lang="pt">Baixe o .iso</span><span lang="en">Download the .iso</span></h3>
+      <p><span lang="pt">Um arquivo só, para BIOS antigo e UEFI. Escolha 64 ou 32 bits.</span><span lang="en">One file for legacy BIOS and UEFI. Pick 64 or 32 bits.</span></p>
+    </li>
+    <li>
+      <h3><span lang="pt">Grave num pen drive</span><span lang="en">Write it to a USB stick</span></h3>
+      <p><span lang="pt">Com o <a href="https://rufus.ie">Rufus</a> ou o <a href="https://etcher.balena.io">balenaEtcher</a>, em pen drive de 4 GB ou mais.</span><span lang="en">With <a href="https://rufus.ie">Rufus</a> or <a href="https://etcher.balena.io">balenaEtcher</a>, on a 4 GB stick or bigger.</span></p>
+    </li>
+    <li>
+      <h3><span lang="pt">Ligue pelo pen drive</span><span lang="en">Boot from the stick</span></h3>
+      <p><span lang="pt">No primeiro boot ele se arruma sozinho e cria o seu perfil. Para ficar no HD: Sistema &gt; Instalar.</span><span lang="en">On first boot it sets itself up and creates your profile. To keep it on the hard drive: System &gt; Install.</span></p>
+    </li>
+  </ol>
+  <p class="nota"><span lang="pt">Jogos, BIOS e ROMs não acompanham o sistema. Mande os seus pelo navegador do celular ou por um pen drive.</span><span lang="en">Games, BIOS and ROMs are not included. Send yours from your phone's browser or a USB stick.</span></p>
+</section>
+
+<section class="secao" id="consoles">
+  <h2>Consoles</h2>
+  <p class="intro"><span lang="pt">Para ligar: PC de 64 bits com 2 GB de memória, ou PC de 32 bits (Pentium 4, Pentium M, Atom) com 1 GB. O que cada console pede para rodar bem:</span><span lang="en">To boot: a 64-bit PC with 2 GB of RAM, or a 32-bit PC (Pentium 4, Pentium M, Atom) with 1 GB. What each console needs to run well:</span></p>
+  <div class="tabela-rolagem">
+  <table class="inventario">
+    <thead><tr>
+      <th>Console</th><th><span lang="pt">Emulador</span><span lang="en">Emulator</span></th>
+      <th><span lang="pt">PC para rodar bem</span><span lang="en">PC to run it well</span></th><th>32 bits</th>
+    </tr></thead>
+    <tbody>
+      <tr><td>NES, Master System, Game Gear, Game Boy</td><td>Mesen, Genesis Plus GX, Gambatte</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim">✓</td></tr>
+      <tr><td>Super Nintendo, Mega Drive, Game Boy Advance</td><td>Snes9x, Genesis Plus GX, mGBA</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim">✓</td></tr>
+      <tr><td><span lang="pt">Fliperama, Neo Geo</span><span lang="en">Arcade, Neo Geo</span></td><td>FBNeo</td><td>Pentium 4, Atom</td><td class="sim">✓</td></tr>
+      <tr><td>PC (DOS), Doom</td><td>DOSBox Pure, PrBoom</td><td><span lang="pt">Qualquer um</span><span lang="en">Any</span></td><td class="sim">✓</td></tr>
+      <tr><td>PlayStation</td><td>PCSX ReARMed</td><td>Pentium 4, Atom</td><td class="sim">✓</td></tr>
+      <tr><td>Nintendo 64</td><td>Mupen64Plus-Next</td><td><span lang="pt">Core 2 Duo e vídeo com OpenGL 3.3 (sem ele, mais lento)</span><span lang="en">Core 2 Duo and OpenGL 3.3 graphics (slower without it)</span></td><td class="sim">✓</td></tr>
+      <tr><td>Nintendo DS</td><td>melonDS</td><td>Core 2 Duo</td><td class="nao">–</td></tr>
+      <tr><td>PSP, Dreamcast</td><td>PPSSPP, Flycast</td><td><span lang="pt">Core i3 e vídeo com OpenGL 3.3</span><span lang="en">Core i3 and OpenGL 3.3 graphics</span></td><td class="nao">–</td></tr>
+      <tr><td>Sega Saturn</td><td>Beetle Saturn</td><td><span lang="pt">Core i5 de 4 núcleos</span><span lang="en">Quad-core Core i5</span></td><td class="nao">–</td></tr>
+      <tr><td>Half-Life</td><td>Xash3D</td><td><span lang="pt">Core 2 Duo (com a sua cópia da Steam)</span><span lang="en">Core 2 Duo (with your own Steam copy)</span></td><td class="sim">✓</td></tr>
+      <tr class="em-breve"><td>PS2, GameCube, Wii, 3DS</td><td>PCSX2, Dolphin, Azahar</td><td><span lang="pt">Na v0.22, para PCs mais novos</span><span lang="en">Coming in v0.22, for newer PCs</span></td><td class="nao">–</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="nota"><span lang="pt">Na versão de 32 bits entram os emuladores leves: FCEUmm, Snes9x 2010, PicoDrive e gpSP. Os requisitos são estimativas: cada versão é testada em máquinas virtuais e em poucos PCs de verdade.</span><span lang="en">The 32-bit version uses the light emulators: FCEUmm, Snes9x 2010, PicoDrive and gpSP. Requirements are estimates: every version is tested on virtual machines and a few real PCs.</span></p>
+</section>
+
+<section class="secao escura" id="capturas">
+  <h2><span lang="pt">Capturas</span><span lang="en">Screenshots</span></h2>
+  <div class="galeria">
+    <figure class="grande"><img loading="lazy" src="img/carrossel.png" width="1280" height="800" alt="Carrossel de capas" data-alt-en="Cover carousel"><figcaption><span lang="pt">Carrossel com filtros por console, favoritos e "Continuar jogando".</span><span lang="en">Carousel with console filters, favorites and "Continue playing".</span></figcaption></figure>
+    <figure><img loading="lazy" src="img/painel.png" width="1280" height="800" alt="Painel Sistema" data-alt-en="System panel"><figcaption><span lang="pt">Painel Sistema, com a explicação de cada opção.</span><span lang="en">System panel, with each option explained.</span></figcaption></figure>
+    <figure><img loading="lazy" src="img/perfis.png" width="1280" height="800" alt="Perfis com avatar" data-alt-en="Profiles with avatars"><figcaption><span lang="pt">Perfis: cada um com seus saves e favoritos.</span><span lang="en">Profiles, each with its own saves and favorites.</span></figcaption></figure>
+    <figure><img loading="lazy" src="img/carregando.png" width="1280" height="800" alt="Abrindo um jogo" data-alt-en="Opening a game"><figcaption><span lang="pt">Abrindo um jogo, com os atalhos na tela.</span><span lang="en">Opening a game, with the shortcuts on screen.</span></figcaption></figure>
+    <figure><img loading="lazy" src="img/freedoom.png" width="1280" height="800" alt="Freedoom rodando" data-alt-en="Freedoom running"><figcaption><span lang="pt">Freedoom, um dos jogos livres que o sistema baixa.</span><span lang="en">Freedoom, one of the free games it downloads.</span></figcaption></figure>
+    <figure><img loading="lazy" src="img/energia.png" width="1280" height="800" alt="Menu do botão de energia" data-alt-en="Power button menu"><figcaption><span lang="pt">Botão de energia: suspender, reiniciar ou desligar.</span><span lang="en">Power button: sleep, restart or shut down.</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="secao historia" id="historia">
+  <div class="historia-texto">
+    <h2><span lang="pt">De onde veio</span><span lang="en">Where it came from</span></h2>
+    <p><span lang="pt">Começou com um analisador de laboratório, o iChroma II, que ia para o lixo eletrônico. Com o sistema dele modificado, virou fliperama.</span><span lang="en">It started with a lab analyzer, the iChroma II, headed for e-waste. With its system modified, it became an arcade machine.</span></p>
+    <p><span lang="pt">O mesmo menu foi para os PCs. Um notebook parado na gaveta ou um desktop de escritório aposentado viram console, sem comprar nada.</span><span lang="en">The same menu then came to PCs. A laptop forgotten in a drawer or a retired office desktop becomes a console, without buying anything.</span></p>
+  </div>
+  <div class="historia-fotos">
+    <img loading="lazy" src="img/ichroma_frente.jpg" width="1280" height="720" alt="iChroma II ligado com o menu de jogos" data-alt-en="iChroma II showing the game menu">
+    <img loading="lazy" src="img/ichroma_traseira.jpg" width="1280" height="720" alt="Traseira do iChroma com cabo de rede e pen drive" data-alt-en="Back of the iChroma with network cable and USB stick">
+  </div>
+</section>
+
+<section class="secao escura" id="ichroma">
+  <div class="ichroma">
+    <img class="ichroma-gif" loading="lazy" src="img/boot.gif" width="400" height="240" alt="Animação de boot do fliperama" data-alt-en="Arcade boot animation">
+    <div>
+      <h2><span lang="pt">Fliperama no iChroma</span><span lang="en">Arcade on the iChroma</span></h2>
+      <p><span lang="pt">Android 2.3 com boot próprio e o menu ScrapCade em Java, pela GPU. Roda PlayStation, Super Nintendo, Neo Geo e Nintendo 64 num processador de 1 GHz.</span><span lang="en">Android 2.3 with its own boot and the ScrapCade menu in Java, on the GPU. Runs PlayStation, Super Nintendo, Neo Geo and Nintendo 64 on a 1 GHz processor.</span></p>
+      <div class="acoes">
+        <a class="botao" href="https://github.com/thiagotechmaker/scrapcade-fliperama"><span lang="pt">Ver o projeto</span><span lang="en">See the project</span></a>
+        <a class="link-claro" href="https://github.com/thiagotechmaker/scrapcade-fliperama/releases/latest"><span lang="pt">Baixar o app (APK)</span><span lang="en">Download the app (APK)</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <img src="img/logo.png" alt="" width="120">
+  <nav aria-label="Links">
+    <a href="https://github.com/thiagotechmaker/scrapcade.os">ScrapCade OS</a>
+    <a href="https://github.com/thiagotechmaker/scrapcade-fliperama"><span lang="pt">Fliperama do iChroma</span><span lang="en">iChroma arcade</span></a>
+    <a href="https://github.com/thiagotechmaker/scrapcade.os/discussions"><span lang="pt">Conversas</span><span lang="en">Discussions</span></a>
+    <a href="https://github.com/thiagotechmaker/scrapcade.os/issues/new/choose"><span lang="pt">Relatar um problema</span><span lang="en">Report a problem</span></a>
+  </nav>
+  <p><span lang="pt">Código livre (GPLv3). Logotipos de consoles são dos seus donos e aparecem só para identificação.</span><span lang="en">Free software (GPLv3). Console logos belong to their owners and appear only for identification.</span></p>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
